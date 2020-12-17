@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GH.ETL.Main", "GH.ETL.Main\GH.ETL.Main.csproj", "{F5DE12B4-3276-4F7F-9F7B-D62441CD412F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Publish", "Publish", "{52F4C622-2234-45E0-A699-3BA371A0F760}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GH.ETL.GUI", "GH.ETL.GUI\GH.ETL.GUI.csproj", "{1F2264CF-B945-4847-8B9D-9444051E2DB1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6AD0C913-94A4-4F79-BA39-287721163990}"
+	ProjectSection(SolutionItems) = preProject
+		dev.log = dev.log
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5DE12B4-3276-4F7F-9F7B-D62441CD412F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5DE12B4-3276-4F7F-9F7B-D62441CD412F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5DE12B4-3276-4F7F-9F7B-D62441CD412F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5DE12B4-3276-4F7F-9F7B-D62441CD412F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F2264CF-B945-4847-8B9D-9444051E2DB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F2264CF-B945-4847-8B9D-9444051E2DB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F2264CF-B945-4847-8B9D-9444051E2DB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F2264CF-B945-4847-8B9D-9444051E2DB1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C5862F25-1A1B-4571-ADCD-C377C57ED2E9}
+	EndGlobalSection
+EndGlobal

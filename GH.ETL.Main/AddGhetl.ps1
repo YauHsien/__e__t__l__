@@ -1,0 +1,5 @@
+Write-Host "Creating service ghetl..."
+New-Service -Name "ghetl" -BinaryPathName "$((Get-Item .).FullName)\GH.ETL.Main.exe"
+Start-Service -Name "ghetl"
+Get-Service -Name "ghetl"
+Write-Host "Done."
