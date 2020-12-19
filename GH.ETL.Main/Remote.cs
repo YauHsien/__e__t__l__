@@ -33,10 +33,14 @@ namespace GH.ETL.Main
 
             var request = new DataUpdateRequest();
             request.data = data;
+            request.pharmacy.id = _configuration.GetSection("Parameter:Pharmacy:Id").Value;
+            request.pharmacy.name = _configuration.GetSection("Parameter:Pharmacy:Name").Value;
             request.timestamp = ((DateTimeOffset)dateTime).ToUnixTimeSeconds();
             request.hash = Sign(request);
 
-            var content = JsonContent.Create<DataUpdateRequest>(request);
+            var options = new JsonSerializerOptions();
+            options.Converters.Add(new DateTimeCustomConverter());
+            var content = JsonContent.Create<DataUpdateRequest>(request, options: options);
             var response = await _httpClient.PostAsync(endpoint, content);
         }
 
@@ -59,6 +63,10 @@ namespace GH.ETL.Main
 
             return
                 data.Select(r => string.Format("{0}&{1}&{2}", r.IdNo, r.Birthday, r.CustomerName)).Aggregate((a, b) => a + "&" + b)
+                + "&"
+                + request.pharmacy.id
+                + "&"
+                + request.pharmacy.name
                 + "&"
                 + request.timestamp.ToString();
         }
